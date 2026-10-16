@@ -1,4 +1,4 @@
-name: Build and Deploy Zola site
+name: build and deploy zola
 
 on:
   workflow_dispatch:
