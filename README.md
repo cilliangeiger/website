@@ -1,95 +1,57 @@
-# Terminus
+<div align="center">
+<h1>📚 Minimal</h1>
+  <img src="https://img.shields.io/github/languages/code-size/semanticdata/zola-minimal" />
+  <img src="https://img.shields.io/github/repo-size/semanticdata/zola-minimal" />
+  <img src="https://img.shields.io/github/commit-activity/t/semanticdata/zola-minimal" />
+  <img src="https://img.shields.io/github/last-commit/semanticdata/zola-minimal" />
+  <img src="https://img.shields.io/website/https/zola-minimal.vercel.app.svg" />
+</div>
 
-An accessible [Zola](https://github.com/getzola/zola) theme with a dark color
-scheme and retro computer terminal-like vibe, multi-language support, zero
-required JavaScript, pretty font ligatures, and a perfect baseline Lighthouse
-score.
+<div align="center">
 
-**Try the demo now:** https://ebkalderon.github.io/terminus/
+[Minimal](https://zola-minimal.vercel.app/) is a [Zola](https://www.getzola.org) theme with the goal of helping you build a light, fast, and SEO ready landing page or website.
 
-![Screenshot of the Terminus demo website on a desktop browser](https://github.com/user-attachments/assets/ae7c378b-2987-4dbd-a84e-7d272e8856bc)
+It is based on the [Jekyll](https://jekyllrb.com/) theme with [the same name](https://github.com/pages-themes/minimal).
 
-Terminus is largely a port of Radek Kozieł's [Terminal Theme for
-Hugo](https://github.com/panr/hugo-theme-terminal) but with several key
-differences. Credit to the [zerm](https://github.com/ejmg/zerm) and
-[tabi](https://github.com/welpo/tabi) themes for inspiring some of these
-changes.
+Check out the [demo](https://zola-minimal.vercel.app/).
 
-* Better accessibility (WCAG 2.2 Level AA minimum target)
-* Mobile-first design with improved responsiveness
-* Social media icons in footer
-* Support for [GitHub-style alerts]
-* SEO friendly (better OpenGraph support, will add Schema.org eventually)
-* No post image previews for a cleaner look
+</div>
 
-[GitHub-style alerts]: https://ebkalderon.github.io/terminus/blog/shortcodes/#alert-shortcode
+![theme screenshot](screenshot.png)
 
-## Features
+## 🚀 Quick Start
 
-- [x] Perfect baseline Lighthouse score (Performance, Accessibility, Best Practices and SEO).
-- [x] [Social media icons in footer](./theme.toml#L70-L73)
-- [x] [Custom shortcodes](https://ebkalderon.github.io/terminus/blog/shortcodes/)
-- [x] Copy button on code blocks
-- [ ] [Comprehensive documentation] (still working on it!)
-- [ ] Searchable archive page
-- [ ] Projects portfolio page
-- [ ] Site navigation submenus
-- [x] Customizable [color schemes](./theme.toml#L22-L27)
-- [x] [KaTeX](https://katex.org/) support for mathematical notation
+Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ v0.18.0.
 
-[Comprehensive documentation]: https://ebkalderon.github.io/terminus/
+```sh
+# 1. Clone the repo
+git clone git@github.com:semanticdata/zola-minimal.git
 
-## Getting Started
+# 2. Change directory into clone
+cd zola-minimal
 
-### Manual Installation
+# 3. Serve the site locally
+zola serve
 
-1. Initialize a Git repository in your [Zola project directory], if you haven't
-   already:
-   ```bash
-   git init
-   ```
-2. Add the theme as a Git submodule:
-   ```
-   git submodule add https://github.com/ebkalderon/terminus.git themes/terminus
-   ```
-3. Enable the theme in your `config.toml`:
-   ```toml
-   theme = "terminus"
-   ```
-4. Set a website `title` in your  `config.toml`:
-   ```toml
-   title = "Your Site Title"
-   ```
-5. Create a text file named `content/_index.md`. This file controls how your
-   home page looks and behaves. Choose _exactly one_ of the following options:
-   1. **Serve blog posts from `/`:**
-      ```markdown
-      +++
-      title = "Home"
-      paginate_by = 5  # Show 5 posts per page.
-      +++
-      ```
-   2. **Serve posts from a different path, e.g. `blog/`:**
-      ```markdown
-      +++
-      title = "Home"
-
-      [extra]
-      section_path = "blog/_index.md"  # Where to find your posts.
-      max_posts = 5  # Show 5 posts and a link to blog section on home page.
-      +++
-      ```
-
-[Zola project directory]: https://www.getzola.org/documentation/getting-started/cli-usage/#init
-
-### Updating Terminus
-
-To update the Terminus theme as a Git submodule, run:
-
-```bash
-git submodule update --remote themes/terminus
+# 4. Open http://127.0.0.1:1111/ in the browser
 ```
 
-## License
+For more detailed instructions, visit the [Documentation](https://www.getzola.org/documentation/themes/installing-and-using-themes/) page about installing and using themes.
 
-This project is licensed under the terms of the [MIT license](./LICENSE).
+## 🎨 Customization
+
+You can change the configuration, templates and content yourself. Refer to the [config.toml](config.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [config.toml](config.toml) to customize the appearance of your blog. Make sure to visit the Zola [Documentation](https://www.getzola.org/documentation/getting-started/overview/).
+
+Adding custom CSS is as easy as adding your styles to [sass/_custom.scss](sass/_custom.scss). This is made possible because SCSS files are backwards compatible with CSS. This means you can type normal CSS code into a SCSS file and it will be valid.
+
+## 🚩 Reporting Issues
+
+We use GitHub Issues as the official bug tracker for **Minimal**. Please search [existing issues](https://github.com/semanticdata/zola-minimal/issues). It’s possible someone has already reported the same problem. If your problem or idea is not addressed yet, [open a new issue](https://github.com/semanticdata/zola-minimal/issues/new).
+
+## 💜 Acknowledgements
+
+Zola Minimal is a fork of the Jekyll theme [Minimal](https://github.com/pages-themes/minimal).
+
+## © License
+
+Source code in this repository is available under the [MIT License](LICENSE).
