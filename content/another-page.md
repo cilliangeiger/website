@@ -7,4 +7,4 @@ date: 2008-07-17
 
 welcome, brother
 
-Go back [home](../).
+return: [home](../).
