@@ -1,7 +1,6 @@
-# Site's URL. Please include trailing "/".
-base_url = "https://zola-minimal.vercel.app/"
-title = "Zola Minimal"
-description = "Minimal is a Zola theme based on the Jekyll theme of the same name."
+base_url = "https://cilliangeiger.com/"
+title = "cilliangeiger"
+description = "portfolio, things"
 
 compile_sass = true
 build_search_index = false
