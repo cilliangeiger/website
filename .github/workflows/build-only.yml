@@ -1,4 +1,4 @@
-name: Build only Zola site
+name: build only
 
 on:
   # push:
@@ -25,11 +25,13 @@ jobs:
     runs-on: ubuntu-latest
     # if: github.ref != 'refs/heads/main'
     steps:
-      - name: Checkout main
+      - name: checkout main
         uses: actions/checkout@v4
-      - name: Install Zola
+        
+      - name: install zola
         uses: taiki-e/install-action@zola
-      - name: Build Zola
+        
+      - name: build zola
         run: zola check
         env:
           BUILD_ONLY: true

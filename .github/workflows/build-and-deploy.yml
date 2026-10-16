@@ -27,8 +27,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        
       - name: install zola
         uses: taiki-e/install-action@zola
+        
       - name: build zola
         run: zola build
         env:
