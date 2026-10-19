@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta
+      name="description"
+      itemprop="about"
+      content="{{config.description}}"
+    />
+    <link rel="stylesheet" href="{{ get_url(path='styles.css') | safe }}" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="{{ get_url(path='/') | safe }}">
+          <img
+            src="{{ get_url(path='img/logo.jpg') | safe }}"
+            class="site-logo"
+            alt="Logo"
+            width="275px"
+            height="auto"
+        /></a>
+
+        <p>{{ config.description }}</p>
+
+        <p class="view"
+          ><a href="https://instagram.com/cilliangeiger/"
+            >INSTAGRAM <small>cilliangeiger</small></a
+          ></p
+        >
+
+      </header>
+
+      <section> {% block content %} {% endblock content %} </section>
+
+      <footer>
+        <p>
+          <small>
+            LICENSE: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
